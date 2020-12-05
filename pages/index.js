@@ -24,6 +24,8 @@ function HomePage() {
     getPosts()
   }, [])
 
+  console.log(posts, 'へい')
+
   return (
     <>
       <Head>
@@ -37,12 +39,11 @@ function HomePage() {
       {posts.length > 0
         ? posts.map((p) => (
           <Post
-            alt={p.fields.alt}
-            date={p.fields.date}
             key={p.fields.title}
-            image={p.fields.image}
             title={p.fields.title}
-            url={p.fields.url}
+            subTitle={p.fields.subTitle}
+            lectureMovie={p.fields.lectureMovie}
+            body={p.fields.body}
           />
         ))
         : null}
